@@ -29,7 +29,6 @@ hugetlbfs on /dev/hugepages type hugetlbfs (rw,relatime)
 /dev/xvdb on /mnt/disco1 type ext4 (rw,relatime,data=ordered)
 /dev/xvdc on /mnt/disco2 type ext4 (rw,relatime,data=ordered)
 tmpfs on /run/user/1000 type tmpfs (rw,nosuid,nodev,relatime,size=3045488k,mode=700,uid=1000,gid=1000)
-
 ```
 
 ```
@@ -37,7 +36,7 @@ tmpfs on /run/user/1000 type tmpfs (rw,nosuid,nodev,relatime,size=3045488k,mode=
 30
 [ec2-user@ip-172-31-11-253 ~]$ sudo sysctl vm.swappiness=1
 vm.swappiness = 1
-
+```
 
 ```
 ot@ip-172-31-11-253 ec2-user]# echo never > /sys/kernel/mm/transparent_hugepage/enabled
