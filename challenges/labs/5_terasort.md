@@ -1,4 +1,19 @@
 ```
+[saturn@ip-172-31-1-144 ~]$ kinit saturn
+Password for saturn@RSTOKES.HQ: 
+[saturn@ip-172-31-1-144 ~]$ 
+[saturn@ip-172-31-1-144 ~]$ klist 
+Ticket cache: FILE:/tmp/krb5cc_2800
+Default principal: saturn@RSTOKES.HQ
+
+Valid starting       Expires              Service principal
+10/06/2017 12:41:55  10/07/2017 12:41:55  krbtgt/RSTOKES.HQ@RSTOKES.HQ
+	renew until 10/13/2017 12:41:55
+```
+
+
+
+```
 [saturn@ip-172-31-1-144 ~]$ time hadoop jar /opt/cloudera/parcels/CDH/lib/hadoop-mapreduce/hadoop-mapreduce-examples.jar terasort  /user/saturn/tgen /user/saturn/tsort
 17/10/06 12:13:13 INFO terasort.TeraSort: starting
 17/10/06 12:13:15 INFO hdfs.DFSClient: Created token for saturn: HDFS_DELEGATION_TOKEN owner=saturn@RSTOKES.HQ, renewer=yarn, realUser=, issueDate=1507306395265, maxDate=1507911195265, sequenceNumber=21, masterKeyId=4 on 172.31.1.144:8020
